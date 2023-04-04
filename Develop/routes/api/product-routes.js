@@ -96,7 +96,7 @@ router.put('/:id', (req, res) => {
       // get list of current tag_ids
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
       // create filtered list of new tag_ids
-      if (!regexp.body.tagIds) {
+      if (!reg.body.tagIds) {
         return res.status(200).json(productTags);
       }
 
