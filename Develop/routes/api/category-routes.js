@@ -109,7 +109,9 @@ router.put('/:id', async (req, res) => {
           message: 'Category not found'
         });
       } else {
-        res.status(204).end();
+        res.status(200).json({
+          message: 'Category deleted successfully'
+        });
       }
     } catch (error) {
       console.error(error);
