@@ -45,7 +45,9 @@ router.get('/:id', async (req, res) => {
       }
     }catch (error) {
       console.error(error);
-      res.status(500).json({ message: 'Server Error' });
+      res.status(500).json({ 
+        message: 'Server Error'
+      });
     }
 });
 
@@ -57,7 +59,9 @@ router.post('/', async (req, res) => {
     res.status(201).json(newCategory);
   }catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Server Error' });
+    res.status(500).json({ 
+      message: 'Server Error'
+    });
   }
 });
   
@@ -92,7 +96,7 @@ router.put('/:id', async (req, res) => {
 
 
 
-
+//WIP
   router.delete('/:id', async (req, res) => {
     const categoryId = req.params.id;
     try {
